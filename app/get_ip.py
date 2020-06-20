@@ -27,7 +27,7 @@ def send_mail(message):
 	# create a message
 	msg = MIMEMultipart()
 	# Get the message template
-	message_template = read_template('./infos/message.txt')
+	message_template = read_template('/home/pi/webapp/app/infos/message.txt')
 	# add in the ip address to the message template
 	message = message_template.substitute(IP=message)
 	# setup the parameters of the message
