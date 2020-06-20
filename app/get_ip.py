@@ -6,7 +6,7 @@ from email.mime.text import MIMEText
 
 
 MY_ADDRESS = 'framboisepi01@gmail.com'
-PASSWORD = 'Nouvelan2020@'
+PASSWORD = ''
 
 
 def get_ip():
@@ -58,7 +58,6 @@ def main():
 	print("Sending IP Address ")
 	ip = get_ip()
 	send_mail(ip)
-
 
 
 if __name__ == "__main__":
