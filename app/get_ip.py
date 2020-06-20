@@ -1,5 +1,6 @@
 import smtplib
 import socket 
+import io
 from string import Template
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -44,20 +45,20 @@ def send_mail(message):
 
 def get_password(path_to_file):
 	global PASSWORD
-	with open(path_to_file, 'r') as password_txt:
+	with io.open(path_to_file, 'r', encoding='utf-8') as password_txt:
 		PASSWORD = password_txt.read()
 
 
 # Open the template for the mail content
 def read_template(filename):
-	with open(filename, 'r', encoding='utf-8') as template_file:
+	with io.open(filename, 'r', encoding='utf-8') as template_file:
 		template_file_content = template_file.read()
 	return Template(template_file_content)
 
 
 def main():
 	print("Sending IP Address ")
-	get_password("../../Documents/App/password.txt")
+	get_password("/home/pi/Documents/App/password.txt")
 	ip = get_ip()
 	send_mail(ip)
 
