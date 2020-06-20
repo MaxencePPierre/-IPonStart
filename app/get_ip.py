@@ -43,7 +43,7 @@ def send_mail(message):
 
 
 def get_password(path_to_file):
-	with open(path_to_file, 'r', encoding='utf-8') as password_txt:
+	with open(path_to_file, 'r') as password_txt:
 		PASSWORD = password_txt.read()
 
 
