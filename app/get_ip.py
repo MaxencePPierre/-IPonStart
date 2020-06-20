@@ -58,7 +58,7 @@ def read_template(filename):
 
 
 def main():
-	sleep(5)
+	sleep(10)
 	print("Sending IP Address ")
 	get_password("/home/pi/Documents/App/password.txt")
 	ip = get_ip()
