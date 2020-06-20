@@ -1,6 +1,7 @@
 import smtplib
 import socket 
 import io
+from time import sleep
 from string import Template
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -57,6 +58,7 @@ def read_template(filename):
 
 
 def main():
+	sleep(5)
 	print("Sending IP Address ")
 	get_password("/home/pi/Documents/App/password.txt")
 	ip = get_ip()
