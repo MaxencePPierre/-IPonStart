@@ -56,6 +56,7 @@ def read_template(filename):
 
 def main():
 	print("Sending IP Address ")
+	get_password("../../Documents/App/password.txt")
 	ip = get_ip()
 	send_mail(ip)
 
