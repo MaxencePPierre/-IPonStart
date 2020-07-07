@@ -38,12 +38,14 @@
   	<!-- Copyright -->
   	<div class="footer-copyright text-center py-3">© 2020 Copyright: Maxence Petitpierre
   		<a href = "mailto:mpetitpierre1@gmail.com">
-  			<img border="10" alt="Contact" src="./img/arobase.gif" width="30" height="30">
+  			<img border="10" alt="Contact" src={{ url_for('static', filename='arobase.png') }} width="30" height="30" target="_blank">
   		</a>
     	<a href="https://www.linkedin.com/in/maxence-petitpierre/">
-			<img border="10" alt="LinkedIn" src="./img/linkedin.gif" width="30" height="30">
+			<img border="10" alt="LinkedIn" src={{ url_for('static', filename='github.png') }} width="30" height="30" target="_blank">
 		</a>
-    	
+		<a href="https://github.com/MaxencePPierre">
+			<img border="10" alt="Github" src={{ url_for('static', filename='linkedin.png') }} width="30" height="30" target="_blank">
+    	</a>
   	</div>
 
    	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
